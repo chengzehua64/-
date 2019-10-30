@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>哈喽！你好</h1>
+  
+    <h1>123456789</h1>
+    <ul>
+        <li>123</li>
+    </ul>
+   
+</body>
+<script>
+    // prompt("1")
+
+    // document.write("12456789")
+    
+// 一    
+// function newArr(arr){
+//     return Array.from(new Set(arr))
+// }
+// var arr = [1,1,2,9,6,9,6,3,1,4,5];
+// console.log(newArr(arr))
+
+
+// 二
+// function newArr(array){ 
+//     //一个新的数组 
+//     var arrs = []; 
+//     //遍历当前数组 
+//     for(var i = 0; i < array.length; i++){ 
+//         //如果临时数组里没有当前数组的当前值，则把当前值push到新数组里面 
+//         if (arrs.indexOf(array[i]) == -1){ 
+//             arrs.push(array[i])
+//         }; 
+//     } 
+//     return arrs; 
+// }
+// var ar = [1,1,2,5,5,6,8,9,8];
+// console.log(newArr(ar))
+ 
+// 三
+function newArr(arr){
+    for(var i=0;i<arr.length;i++){
+        for(var j=i+1;j<arr.length;j++)
+            if(arr[i]==arr[j]){ 
+            //如果第一个等于第二个，splice方法删除第二个
+            arr.splice(j,1);
+            j--;
+            }
+        }
+           return arr;
+    }
+var arr = [1,1,2,5,6,3,5,5,6,8,9,8];
+console.log(newArr(arr))
+
+
+
+</script>
+</html>
